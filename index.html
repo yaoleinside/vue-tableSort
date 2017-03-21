@@ -11,13 +11,12 @@
         <thead>
         <tr>
             <th v-for="key in columns"
-                @click="sortyBy(key)"
+                @click="sortBy(key)"
                 :class="{active: sortKey == key}">
                 {{ key | capitalize}}
             </th>
             <span class="arror"
                   :class="sortOrders[key]>0?'asc':'dsc'">
-
                 </span>
         </tr>
         </thead>
@@ -40,8 +39,6 @@
     </demo-grid>
 
 </div>
-
-
 
 
 <script src="./vue.js"></script>
